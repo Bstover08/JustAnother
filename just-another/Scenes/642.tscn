@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://ljdjcmuy4tta"]
+
+[ext_resource type="Script" uid="uid://d2851r8ikop5q" path="res://Scripts/Six42.cs" id="1_md81k"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yw21k"]
+
+[node name="Six42" type="CharacterBody2D" unique_id=1696812633]
+script = ExtResource("1_md81k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=769441279]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1417767971]
+shape = SubResource("CapsuleShape2D_yw21k")
