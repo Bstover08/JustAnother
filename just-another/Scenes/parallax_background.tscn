@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://cmd0tem837y5y"]
+
+[ext_resource type="Texture2D" uid="uid://bp821ikr8hs84" path="res://Assets/parallax-industrial-web/Assets/Layers/bg.png" id="1_8ntqg"]
+[ext_resource type="Texture2D" uid="uid://d4fwdb5hvu4y8" path="res://Assets/parallax-industrial-web/Assets/Layers/far-buildings.png" id="2_41i37"]
+[ext_resource type="Texture2D" uid="uid://bihw82sqi7kpp" path="res://Assets/parallax-industrial-web/Assets/Layers/buildings.png" id="3_h550e"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" unique_id=769491329]
+
+[node name="Background" type="ParallaxLayer" parent="." unique_id=1558799120]
+z_index = -1000
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(272, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=1910261101]
+position = Vector2(137, -78)
+texture = ExtResource("1_8ntqg")
+
+[node name="Farground" type="ParallaxLayer" parent="." unique_id=607760029]
+z_index = -1000
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(272, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Farground" unique_id=1901763055]
+position = Vector2(681, -78)
+texture = ExtResource("1_8ntqg")
+
+[node name="Skyscrapers" type="ParallaxLayer" parent="." unique_id=452409168]
+z_index = -1000
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(272, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Skyscrapers" unique_id=1938495075]
+position = Vector2(109, -57)
+texture = ExtResource("2_41i37")
+
+[node name="Scrapers" type="ParallaxLayer" parent="." unique_id=907197703]
+z_index = -1000
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(272, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Scrapers" unique_id=1476248292]
+position = Vector2(651, -45)
+texture = ExtResource("2_41i37")
+
+[node name="Secondground" type="ParallaxLayer" parent="." unique_id=505396054]
+z_index = -1000
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(272, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Secondground" unique_id=1387482954]
+position = Vector2(677, -43)
+texture = ExtResource("3_h550e")
+
+[node name="Foreground" type="ParallaxLayer" parent="." unique_id=538232300]
+z_index = -1000
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(272, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Foreground" unique_id=574130620]
+position = Vector2(133, -37)
+texture = ExtResource("3_h550e")

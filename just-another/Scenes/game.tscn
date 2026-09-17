@@ -1,9 +1,202 @@
 [gd_scene format=3 uid="uid://bndaw5vlk51c0"]
 
 [ext_resource type="PackedScene" uid="uid://ljdjcmuy4tta" path="res://Scenes/642.tscn" id="1_80nbo"]
+[ext_resource type="PackedScene" uid="uid://bd231ihebxedv" path="res://Scenes/Level1.tscn" id="1_qxrlw"]
+[ext_resource type="Texture2D" uid="uid://bp821ikr8hs84" path="res://Assets/parallax-industrial-web/Assets/Layers/bg.png" id="3_wrm1d"]
+[ext_resource type="Texture2D" uid="uid://bihw82sqi7kpp" path="res://Assets/parallax-industrial-web/Assets/Layers/buildings.png" id="4_3dryh"]
+[ext_resource type="Texture2D" uid="uid://d4fwdb5hvu4y8" path="res://Assets/parallax-industrial-web/Assets/Layers/far-buildings.png" id="4_wowpa"]
+[ext_resource type="Script" uid="uid://ccwmtseieww0w" path="res://Scripts/TetherCord.cs" id="7_1l0tm"]
+[ext_resource type="PackedScene" uid="uid://cmd0tem837y5y" path="res://Scenes/parallax_background.tscn" id="7_v158k"]
 
 [node name="Game" type="Node2D" unique_id=1128443159]
 
+[node name="Level1" parent="." unique_id=1373117814 instance=ExtResource("1_qxrlw")]
+
 [node name="642" parent="." unique_id=1696812633 instance=ExtResource("1_80nbo")]
+z_index = 99
+position = Vector2(71, 6)
+collision_layer = 3
 
 [node name="Camera2D" type="Camera2D" parent="642" unique_id=1752829638]
+zoom = Vector2(2.5, 2.5)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1424112033]
+visible = false
+z_index = -103
+offset_left = -207.0
+offset_top = -169.0
+offset_right = 1178.0
+offset_bottom = 190.0
+texture = ExtResource("3_wrm1d")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect" unique_id=1579151000]
+z_index = -103
+layout_mode = 0
+offset_left = 1385.0
+offset_right = 2770.0
+offset_bottom = 359.0
+texture = ExtResource("3_wrm1d")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/TextureRect" unique_id=2143850529]
+z_index = -103
+layout_mode = 0
+offset_left = 1385.0
+offset_right = 2770.0
+offset_bottom = 359.0
+texture = ExtResource("3_wrm1d")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/TextureRect/TextureRect" unique_id=1731469475]
+z_index = -103
+layout_mode = 0
+offset_left = 1385.0
+offset_right = 2770.0
+offset_bottom = 359.0
+texture = ExtResource("3_wrm1d")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1655308346]
+visible = false
+z_index = -101
+offset_left = -205.0
+offset_top = -154.0
+offset_right = 431.0
+offset_bottom = 189.0
+texture = ExtResource("4_wowpa")
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect2" unique_id=1621206295]
+visible = false
+z_index = -101
+layout_mode = 0
+offset_left = 652.0
+offset_top = 5.0
+offset_right = 1288.0
+offset_bottom = 348.0
+texture = ExtResource("4_wowpa")
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=1601026008]
+visible = false
+offset_left = 1084.0
+offset_top = -149.0
+offset_right = 2369.0
+offset_bottom = 192.0
+texture = ExtResource("4_3dryh")
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect3" unique_id=1343762888]
+visible = false
+layout_mode = 0
+offset_left = 2559.0
+offset_top = 2.0
+offset_right = 3844.0
+offset_bottom = 343.0
+texture = ExtResource("4_3dryh")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect3" unique_id=2037934616]
+visible = false
+layout_mode = 0
+offset_left = -1090.0
+offset_right = 195.0
+offset_bottom = 341.0
+texture = ExtResource("4_3dryh")
+
+[node name="TextureRect4" type="TextureRect" parent="TextureRect3" unique_id=714290166]
+visible = false
+z_index = -102
+layout_mode = 0
+offset_left = 1276.0
+offset_right = 2561.0
+offset_bottom = 341.0
+texture = ExtResource("4_3dryh")
+
+[node name="TextureRect3" type="TextureRect" parent="TextureRect3" unique_id=1223540018]
+visible = false
+z_index = -10
+layout_mode = 0
+offset_left = -618.0
+offset_top = -16.0
+offset_right = 18.0
+offset_bottom = 327.0
+texture = ExtResource("4_wowpa")
+
+[node name="TextureRect3" type="TextureRect" parent="TextureRect3/TextureRect3" unique_id=216476288]
+visible = false
+z_index = -10
+layout_mode = 0
+offset_left = 649.0
+offset_top = -10.0
+offset_right = 1285.0
+offset_bottom = 333.0
+texture = ExtResource("4_wowpa")
+
+[node name="TextureRect3" type="TextureRect" parent="TextureRect3/TextureRect3/TextureRect3" unique_id=93596143]
+visible = false
+z_index = -101
+layout_mode = 0
+offset_left = 810.0
+offset_top = -16.0
+offset_right = 1446.0
+offset_bottom = 327.0
+texture = ExtResource("4_wowpa")
+
+[node name="TextureRect3" type="TextureRect" parent="TextureRect3/TextureRect3/TextureRect3/TextureRect3" unique_id=252758406]
+visible = false
+z_index = -10
+layout_mode = 0
+offset_left = -307.0
+offset_top = 95.0
+offset_right = 329.0
+offset_bottom = 438.0
+texture = ExtResource("4_wowpa")
+
+[node name="TextureRect4" type="TextureRect" parent="TextureRect3/TextureRect3/TextureRect3/TextureRect3" unique_id=1743540100]
+visible = false
+z_index = -101
+layout_mode = 0
+offset_left = 751.0
+offset_top = -9.0
+offset_right = 1387.0
+offset_bottom = 334.0
+texture = ExtResource("4_wowpa")
+
+[node name="TextureRect3" type="TextureRect" parent="TextureRect3/TextureRect3/TextureRect3/TextureRect3/TextureRect4" unique_id=1334997459]
+visible = false
+z_index = -10
+layout_mode = 0
+offset_left = 690.0
+offset_top = 16.0
+offset_right = 1326.0
+offset_bottom = 359.0
+texture = ExtResource("4_wowpa")
+
+[node name="TextureRect3" type="TextureRect" parent="TextureRect3/TextureRect3/TextureRect3/TextureRect3/TextureRect4/TextureRect3" unique_id=1559036942]
+visible = false
+z_index = -10
+layout_mode = 0
+offset_left = 810.0
+offset_top = -16.0
+offset_right = 1446.0
+offset_bottom = 327.0
+texture = ExtResource("4_wowpa")
+
+[node name="TextureRect3" type="TextureRect" parent="TextureRect3/TextureRect3/TextureRect3/TextureRect3/TextureRect4/TextureRect3/TextureRect3" unique_id=1514615530]
+visible = false
+z_index = -10
+layout_mode = 0
+offset_left = 428.0
+offset_top = 78.0
+offset_right = 1064.0
+offset_bottom = 421.0
+texture = ExtResource("4_wowpa")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="." unique_id=381348577]
+position = Vector2(92, 6)
+node_a = NodePath("../642")
+node_b = NodePath("../PlugBlock")
+
+[node name="TetherCord" type="Line2D" parent="PinJoint2D" unique_id=514947315]
+width = 3.0
+default_color = Color(0.19434929, 0.19434926, 0.19434926, 1)
+script = ExtResource("7_1l0tm")
+PlayerPath = NodePath("../../642")
+PlugPath = NodePath("../../PlugBlock")
+
+[node name="ParallaxBackground" parent="." unique_id=769491329 instance=ExtResource("7_v158k")]
+follow_viewport_enabled = true

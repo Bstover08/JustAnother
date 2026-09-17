@@ -13,7 +13,6 @@ config_version=5
 config/name="JustAnother"
 run/main_scene="uid://bndaw5vlk51c0"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
-config/icon="res://icon.svg"
 
 [display]
 
@@ -30,4 +29,6 @@ project/assembly_name="JustAnother"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+environment/defaults/default_clear_color=Color(0.09803922, 0.15686275, 0.12156863, 1)

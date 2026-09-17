@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://eqvw7uejn6g6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yw21k"]
+
+[node name="Power Socket" type="Area2D" unique_id=164554763]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=57816354]
+position = Vector2(2, 0)
+shape = SubResource("RectangleShape2D_yw21k")
