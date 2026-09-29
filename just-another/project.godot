@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="JustAnother"
-run/main_scene="uid://bndaw5vlk51c0"
+run/main_scene="uid://dd21e7v4iqyvs"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 
 [display]

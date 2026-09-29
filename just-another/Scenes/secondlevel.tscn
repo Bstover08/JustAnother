@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bot0xvpunusc8"]
+
+[ext_resource type="PackedScene" uid="uid://vwlrnh22fy3y" path="res://Scenes/level_2.tscn" id="1_syapn"]
+[ext_resource type="PackedScene" uid="uid://ljdjcmuy4tta" path="res://Scenes/642.tscn" id="2_j5c8p"]
+[ext_resource type="PackedScene" uid="uid://cmd0tem837y5y" path="res://Scenes/parallax_background.tscn" id="3_8xg1b"]
+[ext_resource type="PackedScene" uid="uid://c0bnk57fdm87o" path="res://Scenes/enemy.tscn" id="4_vmv2h"]
+[ext_resource type="AudioStream" uid="uid://dtt17gm0umcn4" path="res://Assets/parallax-industrial-web/Assets/Industrial Theme Music/industrial.mp3" id="5_t0ue0"]
+
+[node name="Secondlevel" type="Node2D" unique_id=1128443159]
+
+[node name="Level2" parent="." unique_id=1373117814 instance=ExtResource("1_syapn")]
+
+[node name="642" parent="." unique_id=1696812633 instance=ExtResource("2_j5c8p")]
+z_index = 99
+position = Vector2(72, 5)
+collision_layer = 129
+collision_mask = 129
+metadata/_edit_group_ = true
+
+[node name="Camera2D" type="Camera2D" parent="642" unique_id=1752829638]
+zoom = Vector2(2.5, 2.5)
+
+[node name="ParallaxBackground" parent="." unique_id=769491329 instance=ExtResource("3_8xg1b")]
+follow_viewport_enabled = true
+
+[node name="Enemy" parent="." unique_id=1574235548 instance=ExtResource("4_vmv2h")]
+position = Vector2(916, 10)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=609713996]
+stream = ExtResource("5_t0ue0")
+autoplay = true

@@ -8,7 +8,7 @@
 
 [node name="Background" type="ParallaxLayer" parent="." unique_id=1558799120]
 z_index = -1000
-motion_scale = Vector2(0.1, 0.1)
+motion_scale = Vector2(0.3, 0.3)
 motion_mirroring = Vector2(272, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=1910261101]
@@ -17,7 +17,7 @@ texture = ExtResource("1_8ntqg")
 
 [node name="Farground" type="ParallaxLayer" parent="." unique_id=607760029]
 z_index = -1000
-motion_scale = Vector2(0.1, 0.1)
+motion_scale = Vector2(0.3, 0.3)
 motion_mirroring = Vector2(272, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Farground" unique_id=1901763055]
@@ -44,7 +44,7 @@ texture = ExtResource("2_41i37")
 
 [node name="Secondground" type="ParallaxLayer" parent="." unique_id=505396054]
 z_index = -1000
-motion_scale = Vector2(0.3, 0.3)
+motion_scale = Vector2(0.1, 0.1)
 motion_mirroring = Vector2(272, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Secondground" unique_id=1387482954]
@@ -53,7 +53,7 @@ texture = ExtResource("3_h550e")
 
 [node name="Foreground" type="ParallaxLayer" parent="." unique_id=538232300]
 z_index = -1000
-motion_scale = Vector2(0.3, 0.3)
+motion_scale = Vector2(0.1, 0.1)
 motion_mirroring = Vector2(272, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Foreground" unique_id=574130620]

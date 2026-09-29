@@ -1,11 +1,14 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1789662567
-::res://Assets/::1789493047
+::res://::1790702955
+::res://Assets/::1790270510
 0x72_16x16RobotTileset.v1.png::CompressedTexture2D::1970348386118509339::1789145300::1789145301::1::::<><><>0<>0<>f93c68140f6c8eeadd6aa14e6a40983d<>res://.godot/imported/0x72_16x16RobotTileset.v1.png-c8342f4eadbff294b995e17cd9e8f7ac.ctex::
+Flowers Kingdom.ttf::FontFile::303286248418070332::1790267576::1790269763::1::::<><><>0<>0<>5902c9420fe51843442d6f55cc2d1c1e<>res://.godot/imported/Flowers Kingdom.ttf-9268513aa3f33828da893aa198fe4e6e.fontdata::
 image.png::CompressedTexture2D::5032711732462404243::1789493004::1789493047::1::::<><><>0<>0<>b536dd4cfe80be16647d7d3d1094fb08<>res://.godot/imported/image.png-0675dfeff6aa31652eb3551faf7498f0.ctex::
 industrial.v2.png::CompressedTexture2D::2619933636132282126::1789145144::1789145144::1::::<><><>0<>0<>40080246574d67ead71c738d72f0ca47<>res://.godot/imported/industrial.v2.png-cfca448f6f2e5b461bc0a2358c8c5192.ctex::
+Russian.ttf::FontFile::4753360072169606152::1790267490::1790269764::1::::<><><>0<>0<>f0330fd85b759131fb7d24d75075c8b4<>res://.godot/imported/Russian.ttf-5ec713fef6e3190935594b376f739a6a.fontdata::
 ::res://Assets/parallax-industrial-web/::1789407500
-::res://Assets/parallax-industrial-web/Assets/::1789407500
+::res://Assets/parallax-industrial-web/Assets/::1790270630
+StockCake-Industrial_Twilight_Silhouette-2790330-standard.png::CompressedTexture2D::3117257970101950419::1790270630::1790270630::1::::<><><>0<>0<>8b1220f091eac50db732da63695673dd<>res://.godot/imported/StockCake-Industrial_Twilight_Silhouette-2790330-standard.png-240a484bf815823146e4f549fa6d07a4.ctex::
 ::res://Assets/parallax-industrial-web/Assets/Industrial Theme Music/::1789407500
 industrial.mp3::AudioStreamMP3::8533709379586779551::1789407500::1789407500::1::::<><><>0<>0<>0a0365b37e8ea22ed45559b920616f17<>res://.godot/imported/industrial.mp3-ad686ba040ebde667f7a9944804836c0.mp3str::
 industrial.ogg::AudioStreamOggVorbis::6687172204531977909::1789407500::1789407500::1::::<><><>0<>0<>26cce38aca50d674699c055ce42d1024<>res://.godot/imported/industrial.ogg-b793058563a1016b32ebc0f269dc1326.oggvorbisstr::
@@ -15,13 +18,25 @@ bg.png::CompressedTexture2D::3509064030045424943::1789407500::1789407500::1::::<
 buildings.png::CompressedTexture2D::2963778228791362997::1789407500::1789407500::1::::<><><>0<>0<>bcc7614e9483d7f6b97099014774eff4<>res://.godot/imported/buildings.png-4e1c1989a8aebe7a661fdaa9bd1dd202.ctex::
 far-buildings.png::CompressedTexture2D::9206401635789532181::1789407500::1789407500::1::::<><><>0<>0<>494988e99ccad97f36a33817f7e62a71<>res://.godot/imported/far-buildings.png-85e7e9d1568467cd656eef234bd8833f.ctex::
 skill-foreground.png::CompressedTexture2D::8448993106527226490::1789407500::1789407500::1::::<><><>0<>0<>dbf7ba5750150b0fcae4326edd4ae400<>res://.godot/imported/skill-foreground.png-448568a76b35593d812f72d1e416efd8.ctex::
-::res://Scenes/::1789581604
-642.tscn::PackedScene::790855027454633914::1789580490::0::1::::<><><>0<>0<><>::uid://d2851r8ikop5q::::res://Scripts/Six42.cs<>uid://3cpl5wjtnjfv::::res://Assets/0x72_16x16RobotTileset.v1.png
-game.tscn::PackedScene::3305109680371368437::1789581604::0::1::::<><><>0<>0<><>::uid://ljdjcmuy4tta::::res://Scenes/642.tscn<>uid://bd231ihebxedv::::res://Scenes/Level1.tscn<>uid://bp821ikr8hs84::::res://Assets/parallax-industrial-web/Assets/Layers/bg.png<>uid://bihw82sqi7kpp::::res://Assets/parallax-industrial-web/Assets/Layers/buildings.png<>uid://d4fwdb5hvu4y8::::res://Assets/parallax-industrial-web/Assets/Layers/far-buildings.png<>uid://ccwmtseieww0w::::res://Scripts/TetherCord.cs
-Level1.tscn::PackedScene::2654472351590219283::1789578918::0::1::::<><><>0<>0<><>::uid://bdld6onfdnqgk::::res://Assets/industrial.v2.png<>uid://3cpl5wjtnjfv::::res://Assets/0x72_16x16RobotTileset.v1.png
-parallax_background.tscn::PackedScene::5622852709377251156::1789663769::0::1::::<><><>0<>0<><>::uid://bp821ikr8hs84::::res://Assets/parallax-industrial-web/Assets/Layers/bg.png<>uid://d4fwdb5hvu4y8::::res://Assets/parallax-industrial-web/Assets/Layers/far-buildings.png<>uid://bihw82sqi7kpp::::res://Assets/parallax-industrial-web/Assets/Layers/buildings.png<>uid://dsm0xgplry16e::::res://Assets/parallax-industrial-web/Assets/Layers/skill-foreground.png
+::res://Scenes/::1790704403
+642.tscn::PackedScene::790855027454633914::1790356832::0::1::::<><><>0<>0<><>::uid://d2851r8ikop5q::::res://Scripts/Six42.cs<>uid://3cpl5wjtnjfv::::res://Assets/0x72_16x16RobotTileset.v1.png
+enemy.tscn::PackedScene::6530435640302027138::1790358483::0::1::::<><><>0<>0<><>::uid://rptrpummhdwl::::res://Scripts/Enemy.cs<>uid://3cpl5wjtnjfv::::res://Assets/0x72_16x16RobotTileset.v1.png
+game.tscn::PackedScene::3305109680371368437::1790704458::0::1::::<><><>0<>0<><>::uid://ljdjcmuy4tta::::res://Scenes/642.tscn<>uid://bd231ihebxedv::::res://Scenes/Level1.tscn<>uid://c0bnk57fdm87o::::res://Scenes/enemy.tscn<>uid://bddi23emqmprw::::res://Scenes/world_border.tscn<>uid://dtt17gm0umcn4::::res://Assets/parallax-industrial-web/Assets/Industrial Theme Music/industrial.mp3<>uid://c4lyet4w8ysx4::::res://Scenes/Area2d.cs<>uid://cmd0tem837y5y::::res://Scenes/parallax_background.tscn
+Level1.tscn::PackedScene::2654472351590219283::1790616589::0::1::::<><><>0<>0<><>::uid://bdld6onfdnqgk::::res://Assets/industrial.v2.png<>uid://3cpl5wjtnjfv::::res://Assets/0x72_16x16RobotTileset.v1.png
+level_2.tscn::PackedScene::1520080967285055016::1790702194::0::1::::<><><>0<>0<><>::uid://bdld6onfdnqgk::::res://Assets/industrial.v2.png<>uid://3cpl5wjtnjfv::::res://Assets/0x72_16x16RobotTileset.v1.png
+parallax_background.tscn::PackedScene::5622852709377251156::1790011081::0::1::::<><><>0<>0<><>::uid://bp821ikr8hs84::::res://Assets/parallax-industrial-web/Assets/Layers/bg.png<>uid://d4fwdb5hvu4y8::::res://Assets/parallax-industrial-web/Assets/Layers/far-buildings.png<>uid://bihw82sqi7kpp::::res://Assets/parallax-industrial-web/Assets/Layers/buildings.png
+power_socket.tscn::PackedScene::315101474768698079::1789664162::0::1::::<><><>0<>0<><>::
+secondlevel.tscn::PackedScene::3409847797120971485::1790618207::0::1::::<><><>0<>0<><>::uid://vwlrnh22fy3y::::res://Scenes/level_2.tscn<>uid://ljdjcmuy4tta::::res://Scenes/642.tscn<>uid://cmd0tem837y5y::::res://Scenes/parallax_background.tscn<>uid://c0bnk57fdm87o::::res://Scenes/enemy.tscn<>uid://dtt17gm0umcn4::::res://Assets/parallax-industrial-web/Assets/Industrial Theme Music/industrial.mp3
 tile_map_layer.tscn::PackedScene::3792470790987471787::1789494813::0::1::::<><><>0<>0<><>::
-::res://Scripts/::1789580568
+title_screen.tscn::PackedScene::7427154280857634588::1790355276::0::1::::<><><>0<>0<><>::uid://jd2qvftcbivn::::res://Scripts/TitleScreen.cs<>uid://b8yte7xagcomi::::res://Assets/Russian.ttf<>uid://bp821ikr8hs84::::res://Assets/parallax-industrial-web/Assets/Layers/bg.png
+WallCrawler.tscn::PackedScene::6061841966550570944::1790356091::0::1::::<><><>0<>0<><>::uid://br4slmmb08fve::::res://Scripts/WallCrawler.cs
+world_border.tscn::PackedScene::2603715777647059188::1790702955::0::1::::<><><>0<>0<><>::uid://blft8vcvll6uj::::res://Scripts/WorldBorder.cs
+::res://Scripts/::1790703669
+Enemy.cs::CSharpScript::1225360808824274171::1790617652::0::1::::<>CharacterBody2D<><>0<>0<><>::
 PlugBlock.cs::CSharpScript::5912835789077972227::1789580111::0::1::::<>RigidBody2D<><>0<>0<><>::
-Six42.cs::CSharpScript::9124354179867584920::1789579575::0::1::::<>CharacterBody2D<><>0<>0<><>::
+Area2d.cs::CSharpScript::6832491382973437635::1790704403::0::1::::<><><>0<>0<><>::
+Six42.cs::CSharpScript::9124354179867584920::1790358327::0::1::::<>CharacterBody2D<><>0<>0<><>::
 TetherCord.cs::CSharpScript::4959398851218212528::1789494813::0::1::::<>Line2D<><>0<>0<><>::
+TitleScreen.cs::CSharpScript::639561769092013759::1790269699::0::1::::<>Control<><>0<>0<><>::
+WallCrawler.cs::CSharpScript::3640611178908137370::1790355753::0::1::::<>CharacterBody2D<><>0<>0<><>::
+WorldBorder.cs::CSharpScript::3170033513592454869::1790703669::0::1::::<>Area2D<><>0<>0<><>::

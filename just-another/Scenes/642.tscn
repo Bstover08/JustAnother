@@ -68,6 +68,26 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_eaen6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l8i76")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hqxls")
+}, {
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_mxhfw")
+}, {
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_mxhfw")
+}],
+"loop": 2,
+"name": &"Jump",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_406oo")
 }, {
 "duration": 1.0,
@@ -91,27 +111,24 @@ animations = [{
 "loop": 1,
 "name": &"Walk",
 "speed": 15.0
-}, {
-"frames": [],
-"loop": 1,
-"name": &"new_animation_1",
-"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqxls"]
 size = Vector2(13, 19)
 
-[node name="Six42" type="CharacterBody2D" unique_id=1696812633]
+[node name="Six42" type="CharacterBody2D" unique_id=1696812633 groups=["player"]]
 position = Vector2(0, -11)
+collision_layer = 2147483649
+collision_mask = 2147483649
 script = ExtResource("1_md81k")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=769441279]
-position = Vector2(0, -1.5393584)
-scale = Vector2(1, 0.96456605)
+position = Vector2(0, -3.0000002)
+scale = Vector2(1, 1.0769231)
 sprite_frames = SubResource("SpriteFrames_yw21k")
-animation = &"Idle"
+animation = &"Jump"
 autoplay = "Idle"
-frame_progress = 0.4550881
+frame_progress = 0.4508981
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1417767971]
 position = Vector2(0, 0.5)
