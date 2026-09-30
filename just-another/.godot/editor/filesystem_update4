@@ -1,0 +1,13 @@
+res://Scripts/WallCrawler.cs
+res://Scripts/TitleScreen.cs
+res://Scripts/Enemy.cs
+res://Scripts/Six42.cs
+res://Scripts/PlugBlock.cs
+res://Scripts/TetherCord.cs
+res://Scenes/game.tscn
+res://Scripts/WorldBorder.cs
+res://Scenes/world_border.tscn
+res://LevelTransition.cs
+res://Scripts/Area2d.cs
+res://Scripts/LevelTransition.cs
+res://Scenes/level_transition.tscn

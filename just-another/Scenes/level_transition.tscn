@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cht2weme7jlpj"]
+
+[ext_resource type="Script" uid="uid://7j00abydd5r0" path="res://Scripts/LevelTransition.cs" id="1_jywac"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yw21k"]
+
+[node name="LevelTransition" type="Area2D" unique_id=1778548939]
+script = ExtResource("1_jywac")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1303814387]
+shape = SubResource("RectangleShape2D_yw21k")
