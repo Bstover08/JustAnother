@@ -4,11 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bd231ihebxedv" path="res://Scenes/Level1.tscn" id="1_qxrlw"]
 [ext_resource type="PackedScene" uid="uid://c0bnk57fdm87o" path="res://Scenes/enemy.tscn" id="5_wowpa"]
 [ext_resource type="AudioStream" uid="uid://dtt17gm0umcn4" path="res://Assets/parallax-industrial-web/Assets/Industrial Theme Music/industrial.mp3" id="6_i6g32"]
-[ext_resource type="Script" uid="uid://c4lyet4w8ysx4" path="res://Scripts/Area2d.cs" id="7_1l0tm"]
 [ext_resource type="PackedScene" uid="uid://cmd0tem837y5y" path="res://Scenes/parallax_background.tscn" id="7_v158k"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yw21k"]
-size = Vector2(19.435928, 2837.7988)
 
 [node name="Game" type="Node2D" unique_id=1128443159]
 
@@ -21,8 +17,6 @@ position = Vector2(72, 5)
 scale = Vector2(1.0169154, 1.0055577)
 collision_layer = 129
 collision_mask = 129
-Speed = null
-JumpVelocity = null
 metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="642" unique_id=1752829638]
@@ -33,22 +27,7 @@ follow_viewport_enabled = true
 
 [node name="Enemy" parent="." unique_id=1574235548 instance=ExtResource("5_wowpa")]
 position = Vector2(916, 10)
-Speed = null
-Direction = null
-Gravity = null
-KillDistance = null
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=609713996]
 stream = ExtResource("6_i6g32")
 autoplay = true
-
-[node name="LevelTransition" type="Area2D" parent="." unique_id=19192474]
-position = Vector2(38, -20)
-scale = Vector2(-348.72623, 0.75157446)
-script = ExtResource("7_1l0tm")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelTransition" unique_id=2019181790]
-position = Vector2(-4.150806, -324.6518)
-rotation = -3.1415925
-scale = Vector2(0.019622851, -0.069391795)
-shape = SubResource("RectangleShape2D_yw21k")

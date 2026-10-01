@@ -1,11 +1,130 @@
-[gd_scene format=3 uid="uid://bddi23emqmprw"]
+[gd_scene format=3 uid="uid://balc8p7treetp"]
 
-[ext_resource type="Script" uid="uid://blft8vcvll6uj" path="res://Scripts/WorldBorder.cs" id="1_4jt1s"]
+[sub_resource type="CSharpScript" id="CSharpScript_e8s6q"]
+script/source = "using Godot;
+
+namespace JustAnother.Scripts;
+
+public partial class WorldBorder : Area2D
+{
+    // The distance (in pixels) from the world center to the border edges.
+    [Export] public float BorderOffset = 3000.0f; 
+
+    // Pre-programmed exact safe coordinates to prevent falling into the void
+    [Export] public float DefaultSpawnX = 72.0f;
+    [Export] public float DefaultSpawnY = 5.0f;
+
+    public override void _Ready()
+    {
+        // Connect the Godot 4 body entry engine signal
+        BodyEntered += OnBodyEntered;
+
+        // Generate the 4 infinite walls facing inward toward the center
+        AddBoundary(Vector2.Right, BorderOffset);  
+        AddBoundary(Vector2.Left, BorderOffset);   
+        AddBoundary(Vector2.Down, BorderOffset);   
+        AddBoundary(Vector2.Up, BorderOffset);     
+
+        // Create a dynamic safety timer to wait for the scene transition to settle
+        CreateDelayedSpawnTimer();
+    }
+
+    private void CreateDelayedSpawnTimer()
+    {
+        Timer delayTimer = new Timer();
+        delayTimer.WaitTime = 0.1f; // A small 100ms breath is enough to load everything
+        delayTimer.OneShot = true;  // Run only once at launch
+        
+        // Connect the timeout directly to our safety layout method
+        delayTimer.Timeout += ForceInitialSpawn;
+        
+        AddChild(delayTimer);
+        delayTimer.Start();
+    }
+
+    private void ForceInitialSpawn()
+    {
+        // Strategy A: Check groups first
+        foreach (Node node in GetTree().GetNodesInGroup(\"player\"))
+        {
+            if (node is CharacterBody2D player)
+            {
+                GD.Print($\"[Menu Load] Safe-Spawning player '{player.Name}' at ({DefaultSpawnX}, {DefaultSpawnY}).\");
+                player.GlobalPosition = new Vector2(DefaultSpawnX, DefaultSpawnY);
+                player.Velocity = Vector2.Zero;
+                return;
+            }
+        }
+
+        // Strategy B: Search recursively for any node inheriting CharacterBody2D
+        var root = GetTree().CurrentScene;
+        CharacterBody2D foundPlayer = FindPlayerNode(root);
+
+        if (foundPlayer != null)
+        {
+            GD.Print($\"[Menu Load] Found player '{foundPlayer.Name}' through node discovery. Moving to safe zone.\");
+            foundPlayer.GlobalPosition = new Vector2(DefaultSpawnX, DefaultSpawnY);
+            foundPlayer.Velocity = Vector2.Zero;
+        }
+        else
+        {
+            GD.PrintErr(\"[Menu Load Failure] Could not find any CharacterBody2D in the scene tree yet.\");
+        }
+    }
+
+    // Dynamic scanner that finds your player node no matter where it is hiding in your hierarchy
+    private CharacterBody2D FindPlayerNode(Node root)
+    {
+        if (root is CharacterBody2D player) return player;
+
+        for (int i = 0; i < root.GetChildCount(); i++)
+        {
+            var result = FindPlayerNode(root.GetChild(i));
+            if (result != null) return result;
+        }
+        return null;
+    }
+
+    private void AddBoundary(Vector2 normal, float offset)
+    {
+        CollisionShape2D collisionShape = new CollisionShape2D();
+        WorldBoundaryShape2D boundaryShape = new WorldBoundaryShape2D();
+
+        boundaryShape.Normal = normal;
+        boundaryShape.Distance = -offset; 
+        
+        collisionShape.Shape = boundaryShape;
+        AddChild(collisionShape);
+    }
+
+    private void OnBodyEntered(Node2D body)
+    {
+        if (body is CharacterBody2D player)
+        {
+            GD.Print($\"Player '{player.Name}' hit the world border! Teleporting to safety.\");
+            player.Velocity = Vector2.Zero;
+
+            if (GetTree().CurrentScene.HasNode(\"SpawnPoint\"))
+            {
+                var spawnPoint = GetTree().CurrentScene.GetNode<Marker2D>(\"SpawnPoint\");
+                player.GlobalPosition = spawnPoint.GlobalPosition;
+            }
+            else
+            {
+                player.GlobalPosition = new Vector2(DefaultSpawnX, DefaultSpawnY);
+            }
+        }
+        else
+        {
+            body.QueueFree();
+        }
+    }
+}"
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yw21k"]
 
 [node name="WorldBorder" type="Area2D" unique_id=701810168]
-script = ExtResource("1_4jt1s")
+script = SubResource("CSharpScript_e8s6q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=523808196]
 shape = SubResource("WorldBoundaryShape2D_yw21k")
